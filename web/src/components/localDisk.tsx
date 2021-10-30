@@ -34,6 +34,10 @@ export const LocalDisk = ({ closeModal }: Props) => {
 					</IconContainer>
 				</Container>
 			</Frame>
+			<Details>
+				<div>2 item(s)</div>
+				<div>0 bytes</div>
+			</Details>
 		</StyledModal>
 	)
 }
@@ -41,4 +45,18 @@ export const LocalDisk = ({ closeModal }: Props) => {
 const Container = styled.div`
 	display: flex;
 	margin: 10px;
+`
+
+const Details = styled.div`
+	display: flex;
+	gap: 2px;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: -6px;
+	div {
+		border-style: inset;
+		border-width: 1px;
+		flex: 1;
+		padding-left: 5px;
+	}
 `

@@ -1,7 +1,8 @@
 import { FolderSettings } from "@react95/icons"
-import { Checkbox, Fieldset, Modal, Button } from "@react95/core"
+import { Checkbox, Fieldset, Button } from "@react95/core"
 import * as React from "react"
 import styled from "styled-components"
+import { StyledModal } from "./styledModal"
 
 interface Props {
 	closeModal: () => void
@@ -10,7 +11,7 @@ interface Props {
 // Settings is a component to display dev skills
 export const Settings = ({ closeModal }: Props) => {
 	return (
-		<Modal
+		<StyledModal
 			defaultPosition={{ x: window.innerWidth / 11, y: window.innerHeight / 1.9 }}
 			icon={<FolderSettings />}
 			title="Control Panel"
@@ -30,7 +31,7 @@ export const Settings = ({ closeModal }: Props) => {
 				<Button onClick={closeModal}>OK</Button>
 				<Button onClick={closeModal}>Cancel</Button>
 			</ButtonContainer>
-		</Modal>
+		</StyledModal>
 	)
 }
 

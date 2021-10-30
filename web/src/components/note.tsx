@@ -1,7 +1,9 @@
 import { Notepad } from "@react95/icons"
-import { Frame, Modal } from "@react95/core"
+import { Frame } from "@react95/core"
 import * as React from "react"
 import styled from "styled-components"
+import { StyledModal } from "./styledModal"
+import { FileMenu } from "./fileMenu"
 
 interface Props {
 	closeModal: () => void
@@ -13,22 +15,22 @@ export const Note = ({ closeModal }: Props) => {
 		<StyledModal
 			defaultPosition={{ x: window.innerWidth / 10, y: 0 }}
 			icon={<Notepad />}
-			title="General - Notepad"
+			title="about-me.txt - Notepad"
 			closeModal={closeModal}
 			width="300"
 			height="200"
 		>
+			<FileMenu />
 			<Frame width={"100%"} height={"100%"} boxShadow="in" bg={"white"}>
-				<div>========================</div>
-				<div style={{ fontSize: "20px" }}>Ben Lanyi</div>
-				<div>Software Developer</div>
-				<div>========================</div>
+				<TextLine>========================</TextLine>
+				<TextLine style={{ fontSize: "20px" }}>Ben Lanyi</TextLine>
+				<TextLine>Software Developer</TextLine>
+				<TextLine>========================</TextLine>
 			</Frame>
 		</StyledModal>
 	)
 }
 
-const StyledModal = styled(Modal)`
-	div {
-	}
+const TextLine = styled.div`
+	margin-left: 5px;
 `

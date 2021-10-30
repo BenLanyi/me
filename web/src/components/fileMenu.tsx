@@ -14,6 +14,7 @@ export const FileMenu = () => {
 
 const Container = styled.div`
 	display: flex;
+	margin-top: -5px;
 `
 
 const Item = styled(List.Item)`

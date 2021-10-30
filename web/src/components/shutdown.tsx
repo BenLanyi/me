@@ -5,9 +5,10 @@ import styled from "styled-components"
 
 interface Props {
 	closeModal: () => void
+	reset: () => void
 }
 
-export const Shutdown = ({ closeModal }: Props) => {
+export const Shutdown = ({ closeModal, reset }: Props) => {
 	return (
 		<Modal
 			defaultPosition={{ x: window.innerWidth / 2 - 175, y: window.innerHeight / 2 - 100 }}
@@ -25,14 +26,14 @@ export const Shutdown = ({ closeModal }: Props) => {
 					<div>What do you want the computer to do?</div>
 					<RadioButtonList>
 						<RadioButton readOnly checked>
-							Exit to google.com
+							Restart
 						</RadioButton>
 						<RadioButton readOnly disabled>
 							Shut down
 						</RadioButton>
 					</RadioButtonList>
 					<Actions>
-						<StyledButton onClick={() => window.open("https://www.google.com", "_self")}>OK</StyledButton>
+						<StyledButton onClick={reset}>OK</StyledButton>
 						<StyledButton onClick={closeModal}>Cancel</StyledButton>
 						<StyledButton disabled>Help</StyledButton>
 					</Actions>

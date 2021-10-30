@@ -28,7 +28,7 @@ export const LocalDisk = ({ closeModal }: Props) => {
 						<Install />
 						GitHub
 					</IconContainer>
-					<IconContainer onClick={() => window.open("https://www.linkedin.com/in/ben-lanyi-b9308a172/", "_blank")}>
+					<IconContainer onClick={() => window.open("https://www.linkedin.com/in/ben-lanyi/", "_blank")}>
 						<Inetcfg2303 />
 						LinkedIn
 					</IconContainer>
